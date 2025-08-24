@@ -98,7 +98,7 @@ export function Experience() {
 
   return (
     <section 
-      id="experience" 
+      id="projects" 
       ref={ref}
       className={`py-20 px-6 gradient-subtle ${isVisible ? 'animate-fade-in' : 'opacity-0'}`}
     >
