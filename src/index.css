@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Portfolio Dark Theme */
+    --background: 0 0% 4%; /* Deep Black #0A0A0A */
+    --foreground: 0 0% 85%; /* Light Gray for text */
+
+    --card: 0 0% 10%; /* Charcoal #1A1A1A */
+    --card-foreground: 0 0% 85%;
+
+    --popover: 0 0% 10%;
+    --popover-foreground: 0 0% 85%;
+
+    --primary: 0 0% 100%; /* White for accents */
+    --primary-foreground: 0 0% 4%;
+
+    --secondary: 0 0% 17%; /* Slate Gray #2C2C2C */
+    --secondary-foreground: 0 0% 85%;
+
+    --muted: 0 0% 17%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 0% 17%;
+    --accent-foreground: 0 0% 85%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 85%;
+
+    --border: 0 0% 17%;
+    --input: 0 0% 17%;
+    --ring: 0 0% 85%;
+
+    --radius: 0.75rem;
+
+    /* Custom Portfolio Gradients */
+    --gradient-hero: radial-gradient(ellipse at center, hsl(0 0% 4%) 0%, hsl(0 0% 10%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 17%) 0%, hsl(0 0% 20%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 10%) 0%, hsl(0 0% 15%) 100%);
+    
+    /* Shadows */
+    --shadow-elegant: 0 25px 50px -12px hsl(0 0% 0% / 0.25);
+    --shadow-glow: 0 0 40px hsl(0 0% 100% / 0.1);
+    
+    /* Transitions */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 220 13% 91%;
+
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .light {
+    /* Portfolio Light Theme */
+    --background: 0 0% 100%; /* White */
+    --foreground: 0 0% 15%; /* Dark Gray for text */
+
+    --card: 0 0% 98%; /* Off-white */
+    --card-foreground: 0 0% 15%;
+
+    --popover: 0 0% 98%;
+    --popover-foreground: 0 0% 15%;
+
+    --primary: 0 0% 4%; /* Black for accents */
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 0 0% 95%; /* Light Gray */
+    --secondary-foreground: 0 0% 15%;
+
+    --muted: 0 0% 95%;
+    --muted-foreground: 0 0% 45%;
+
+    --accent: 0 0% 95%;
+    --accent-foreground: 0 0% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 90%;
+    --input: 0 0% 90%;
+    --ring: 0 0% 15%;
+
+    /* Custom Portfolio Gradients for Light Mode */
+    --gradient-hero: radial-gradient(ellipse at center, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+    --gradient-card: linear-gradient(135deg, hsl(0 0% 98%) 0%, hsl(0 0% 95%) 100%);
+    --gradient-subtle: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(0 0% 98%) 100%);
+    
+    /* Shadows for Light Mode */
+    --shadow-elegant: 0 25px 50px -12px hsl(0 0% 0% / 0.15);
+    --shadow-glow: 0 0 40px hsl(0 0% 0% / 0.05);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+    scroll-behavior: smooth;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .gradient-subtle {
+    background: var(--gradient-subtle);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .transition-smooth {
+    transition: var(--transition-smooth);
+  }
+}
